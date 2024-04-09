@@ -142,8 +142,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
             } else {
-                activityMainHelper.hideAddMenu()
-                isMenuVisible = false
+                hideMenuWhatVisible()
             }
         }
 
