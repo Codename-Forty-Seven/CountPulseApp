@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="@string/txt_can_use_sensor"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnOkSensor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnOkSensor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/bg_main_user"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="@string/txt_btn_ok_sensor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnNoSensor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btnNoSensor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/bg_main_user"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="@string/txt_btn_no_sensor"
+            app:layout_constraintBottom_toBottomOf="@+id/btnOkSensor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnOkSensor"
+            app:layout_constraintTop_toTopOf="@+id/btnOkSensor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

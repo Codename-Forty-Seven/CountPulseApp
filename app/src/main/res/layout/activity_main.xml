@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/llWithHistory"
+            android:layout_width="0dp"
+            android:layout_marginVertical="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/flBtnAddNewRate"
+            app:layout_constraintEnd_toEndOf="@+id/rvWithUserInfo"
+            app:layout_constraintStart_toStartOf="@+id/rvWithUserInfo"
+            app:layout_constraintTop_toBottomOf="@+id/rvWithUserInfo">
+
+            <ImageButton
+                android:id="@+id/imgBtnHistory"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/img_btn_history" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:id="@+id/tvHistory"
+                android:focusable="true"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="start|center"
+                android:text="@string/txt_all_history"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/flBtnAddNewRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/bg_main_user"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/img_btn_add" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWithUserInfo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/llWithHistory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/single_item_view" />
+
+        <View
+            android:id="@+id/blurView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/shadow"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/clAddNewPulseInfo"
+            layout="@layout/cl_add_new_pulse_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/clChooseCalendarDay"
+            layout="@layout/cl_choose_calendar_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/clChooseTime"
+            layout="@layout/cl_choose_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/clShowUserHeartSensor"
+            layout="@layout/cl_show_user_heart_sensor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

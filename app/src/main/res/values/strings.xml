@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Count Pulse App</string>
+    <string name="txt_no_info_current_day">Click the button to add information about your health status</string>
+    <string name="txt_systolic">Systolic</string>
+    <string name="txt_diastolic">Diastolic</string>
+    <string name="txt_pulse">Pulse:</string>
+    <string name="txt_can_use_sensor">Heartprint sensor detected on your smartphone You can use it for easy and fast measurements</string>
+    <string name="txt_btn_ok_sensor">Let\'s try it</string>
+    <string name="txt_btn_no_sensor">No, thank you</string>
+    <string name="txt_date_time">Date &amp;Time</string>
+    <string name="txt_btn_confirm_values">Save</string>
+    <string name="txt_current_date">Current Date</string>
+    <string name="txt_current_time">Current Time</string>
+    <string name="txt_btn_cancel_time_date">Cancel</string>
+    <string name="txt_btn_confirm_time_date">Ok</string>
+    <string name="txt_all_history">All History</string>
+    <string name="txt_success_save">Successfully saved</string>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/rounded_background">
+
+
+        <TextView
+            android:id="@+id/tvSystolic"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/tvDiastolic"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDiastolic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvSystolic"
+            app:layout_constraintStart_toStartOf="@+id/tvSystolic"
+            app:layout_constraintTop_toBottomOf="@+id/tvSystolic" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:background="@color/bg_main_user"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDiastolic"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvSystolic" />
+
+        <TextView
+            android:id="@+id/tvTimeAndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="TextView"
+            android:fontFamily="@font/montserrat_semibold"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/tvSystolic" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_pulse"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDiastolic"
+            app:layout_constraintEnd_toStartOf="@+id/tvPulseItem"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeAndDate" />
+
+        <TextView
+            android:id="@+id/tvPulseItem"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

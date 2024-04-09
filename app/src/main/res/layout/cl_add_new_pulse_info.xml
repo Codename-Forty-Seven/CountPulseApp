@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/llWithSystolic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background_ll"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintEnd_toStartOf="@+id/llWithDiastolic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="@string/txt_systolic" />
+
+            <NumberPicker
+                android:id="@+id/systolicPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llWithDiastolic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background_ll"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/llWithSystolic"
+            app:layout_constraintEnd_toStartOf="@+id/llWithPulse"
+            app:layout_constraintStart_toEndOf="@+id/llWithSystolic"
+            app:layout_constraintTop_toTopOf="@+id/llWithSystolic">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="@string/txt_diastolic" />
+
+            <NumberPicker
+                android:id="@+id/diastolicPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llWithPulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background_ll"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/llWithDiastolic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/llWithDiastolic"
+            app:layout_constraintTop_toTopOf="@+id/llWithDiastolic">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="@string/txt_pulse" />
+
+            <NumberPicker
+                android:id="@+id/pulsePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/tvShowHeartRate"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="0"
+                android:layout_weight="2"
+                android:visibility="gone"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/txt_date_time"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llWithSystolic" />
+
+        <LinearLayout
+            android:id="@+id/llWithDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_background_ll"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintBottom_toTopOf="@+id/btnSaveInfoFromUser"
+            app:layout_constraintEnd_toStartOf="@+id/llWithTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <ImageButton
+                android:id="@+id/imgBtnCalendarSmall"
+                android:layout_width="50dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/img_btn_calendar" />
+
+            <TextView
+                android:id="@+id/tvCurrentDateSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llWithTime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/rounded_background_ll"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/llWithDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/llWithDate"
+            app:layout_constraintTop_toTopOf="@+id/llWithDate">
+
+            <ImageButton
+                android:id="@+id/imgBtnClockSmall"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/img_btn_clock" />
+
+            <TextView
+                android:id="@+id/tvCurrentTimeSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_weight="2"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveInfoFromUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/bg_main_user"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/txt_btn_confirm_values"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

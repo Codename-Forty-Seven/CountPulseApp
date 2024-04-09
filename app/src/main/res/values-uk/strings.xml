@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Count Pulse App</string>
+    <string name="txt_no_info_current_day">Натисніть кнопку, щоб додати інформацію про ваш стан здоров\'я</string>
+    <string name="txt_systolic">Систолічний</string>
+    <string name="txt_diastolic">Діастолічний</string>
+    <string name="txt_pulse">Пульс:</string>
+    <string name="txt_can_use_sensor">На вашому смартфоні знайдено датчик відбитку сердця Ви можете використовувати його для зручності та швидкості замірів</string>
+    <string name="txt_btn_ok_sensor">Давайте спробую</string>
+    <string name="txt_btn_no_sensor">Ні, дякую</string>
+    <string name="txt_date_time">Дата &amp; Час</string>
+    <string name="txt_btn_confirm_values">Зберегти</string>
+    <string name="txt_current_date">Поточна Дата</string>
+    <string name="txt_current_time">Поточний Час</string>
+    <string name="txt_btn_cancel_time_date">Відміна</string>
+    <string name="txt_btn_confirm_time_date">Ok</string>
+    <string name="txt_all_history">Історія</string>
+    <string name="txt_success_save">Успішно збережено</string>
+</resources>
